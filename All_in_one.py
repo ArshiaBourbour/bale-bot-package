@@ -14,8 +14,8 @@ import jdatetime
 BOT_TOKEN = ""
 
 DB_PATH           = "bot_data.db"
-ADMIN_USERNAME    = "admin10"
-ADMIN_PASSWORD    = "qweASD10"
+ADMIN_USERNAME    = "username"
+ADMIN_PASSWORD    = "psw"
 MAX_FAIL_ATTEMPTS = 5
 COOLDOWN_MINUTES  = 10
 SESSION_MINUTES   = 10
