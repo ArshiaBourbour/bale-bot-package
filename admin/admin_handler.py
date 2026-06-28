@@ -13,8 +13,8 @@ logger = logging.getLogger(__name__)
 TEHRAN_TZ = ZoneInfo("Asia/Tehran")
 
 # اطلاعات ورود ادمین
-ADMIN_USERNAME = "sh_admin10"
-ADMIN_PASSWORD = "qweASD10"
+ADMIN_USERNAME = "username"
+ADMIN_PASSWORD = "psw"
 
 # حداکثر تعداد خطا قبل از cooldown
 MAX_FAIL_ATTEMPTS = 5
