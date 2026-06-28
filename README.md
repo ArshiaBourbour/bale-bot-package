@@ -163,8 +163,8 @@ sudo systemctl status bale-bot
 ### ورود:
 ```
 دستور: /admin
-نام کاربری: sh_admin10
-رمز عبور: qweASD10
+نام کاربری: username
+رمز عبور: psw
 ```
 
 ### امنیت:
