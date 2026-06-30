@@ -1,33 +1,46 @@
-🤖 Bale Bot
 
-«A production-ready Bale Messenger Bot built with Python, featuring a modular architecture, SQLite database, asynchronous handlers, an admin panel, and CSV export.»
+# 🤖 Bale Bot
 
-"Python" (https://img.shields.io/badge/Python-3.9+-blue.svg)
-"SQLite" (https://img.shields.io/badge/Database-SQLite-green.svg)
-"Async" (https://img.shields.io/badge/Async-Await-orange.svg)
-"License" (https://img.shields.io/badge/License-MIT-success.svg)
+A production-ready **Bale Messenger Bot** built with Python.
 
----
+<br>
 
-✨ Features
+![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Async](https://img.shields.io/badge/Async-Await-orange?style=for-the-badge)
+![License](https://img.shields.io/github/license/ArshiaBourbour/bale-bot-package?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/ArshiaBourbour/bale-bot-package?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/ArshiaBourbour/bale-bot-package?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/ArshiaBourbour/bale-bot-package?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/ArshiaBourbour/bale-bot-package?style=for-the-badge)
+![Repo Size](https://img.shields.io/github/repo-size/ArshiaBourbour/bale-bot-package?style=for-the-badge)
 
-- 🚀 Production-ready architecture
-- 🧩 Clean & Modular structure
-- 💾 SQLite database (WAL Mode)
-- 👤 User registration flow
-- 📱 Phone number validation (Persian & English digits)
-- 🔐 Secure Admin Panel
-- 📊 CSV Export (UTF-8 BOM for Excel)
-- 📈 Registration statistics
-- 📝 Logging system
-- ⚡ Async/Await implementation
-- 🌍 Asia/Tehran timezone support
-- 🔄 Long Polling (No HTTPS server required)
+</div>
+
+---![License](https://img.shields.io/badge/License-MIT-success.svg)
 
 ---
 
-📂 Project Structure
+# ✨ Features
 
+* 🚀 Production-ready architecture
+* 🧩 Clean & Modular structure
+* 💾 SQLite database (WAL Mode)
+* 👤 User registration flow
+* 📱 Phone number validation (Persian & English digits)
+* 🔐 Secure Admin Panel
+* 📊 CSV Export (UTF-8 BOM for Excel)
+* 📈 Registration statistics
+* 📝 Logging system
+* ⚡ Async/Await implementation
+* 🌍 Asia/Tehran timezone support
+* 🔄 Long Polling (No HTTPS server required)
+
+---
+
+# 📂 Project Structure
+
+```text
 bale_bot/
 ├── main.py
 ├── database.py
@@ -53,11 +66,13 @@ bale_bot/
     ├── state_manager.py
     ├── validators.py
     └── csv_exporter.py
+```
 
 ---
 
-📋 Registration Flow
+# 📋 Registration Flow
 
+```text
 /start
     │
     ▼
@@ -83,96 +98,115 @@ Save User Information
     │
     ▼
 Send Free Course Link ✅
+```
 
 ---
 
-👑 Admin Panel
+# 👑 Admin Panel
 
 Login using:
 
+```
 /admin
+```
 
 Authentication:
 
-- Username
-- Password
+* Username
+* Password
 
 Security Features:
 
-- Maximum 5 failed login attempts
-- 10-minute cooldown after multiple failures
-- 10-minute admin session timeout
-- Automatic logout
+* Maximum 5 failed login attempts
+* 10-minute cooldown after multiple failures
+* 10-minute admin session timeout
+* Automatic logout
 
 Available Actions:
 
-- 📥 Export all users as CSV
-- 📊 Registration statistics
-- 🚪 Logout
+* 📥 Export all users as CSV
+* 📊 Registration statistics
+* 🚪 Logout
 
 ---
 
-📊 Database Schema
+# 📊 Database Schema
 
-Column| Type| Description
-id| INTEGER| Primary Key
-chat_id| INTEGER| Unique User ID
-full_name| TEXT| User Full Name
-phone_number| TEXT| Mobile Number
-created_at| TEXT| Registration Date & Time
+| Column       | Type    | Description              |
+| ------------ | ------- | ------------------------ |
+| id           | INTEGER | Primary Key              |
+| chat_id      | INTEGER | Unique User ID           |
+| full_name    | TEXT    | User Full Name           |
+| phone_number | TEXT    | Mobile Number            |
+| created_at   | TEXT    | Registration Date & Time |
 
 ---
 
-🚀 Installation
+# 🚀 Installation
 
-1. Clone Repository
+## 1. Clone Repository
 
+```bash
 git clone <REPOSITORY_URL>
 cd bale_bot
+```
 
 ---
 
-2. Create Virtual Environment
+## 2. Create Virtual Environment
 
 Linux / macOS
 
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
 Windows
 
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
 ---
 
-3. Install Dependencies
+## 3. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
-4. Configure Environment
+## 4. Configure Environment
 
-Create a ".env" file:
+Create a `.env` file:
 
+```env
 BOT_TOKEN=YOUR_BALE_BOT_TOKEN
 DB_PATH=bot_data.db
+```
 
 ---
 
-5. Run the Bot
+## 5. Run the Bot
 
+```bash
 python main.py
+```
 
 ---
 
-⚙️ Running as a Linux Service (systemd)
+# ⚙️ Running as a Linux Service (systemd)
 
 Create:
 
+```bash
 sudo nano /etc/systemd/system/bale-bot.service
+```
 
+```ini
 [Unit]
 Description=Bale Bot
 After=network.target
@@ -188,93 +222,102 @@ RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
+```
 
 Enable the service:
 
+```bash
 sudo systemctl daemon-reload
 sudo systemctl enable bale-bot
 sudo systemctl start bale-bot
 sudo systemctl status bale-bot
+```
 
 ---
 
-📊 CSV Export
+# 📊 CSV Export
 
 The admin panel can export all registered users to a CSV file.
 
 Encoding:
 
-- UTF-8 BOM
+* UTF-8 BOM
 
 Columns:
 
-- Full Name
-- Phone Number
-- Registration Date
-- Registration Time
+* Full Name
+* Phone Number
+* Registration Date
+* Registration Time
 
 The temporary CSV file is automatically deleted after sending.
 
 ---
 
-📱 Phone Number Validation
+# 📱 Phone Number Validation
 
 Supported formats:
 
+```
 09123456789
+```
 
+```
 ۰۹۱۲۳۴۵۶۷۸۹
+```
 
 Validation Rules:
 
-- Starts with 09
-- Exactly 11 digits
-- Supports Persian and English numerals
+* Starts with **09**
+* Exactly **11 digits**
+* Supports Persian and English numerals
 
 ---
 
-📝 Logging
+# 📝 Logging
 
 The bot automatically creates:
 
+```
 bot.log
+```
 
 Logged events include:
 
-- User registrations
-- Admin logins
-- Export actions
-- Errors
-- Exceptions
+* User registrations
+* Admin logins
+* Export actions
+* Errors
+* Exceptions
 
 ---
 
-🛠 Tech Stack
+# 🛠 Tech Stack
 
-- Python
-- SQLite
-- Asyncio
-- Long Polling
-- python-dotenv
-- CSV
-- Logging
-- Modular Architecture
-
----
-
-📌 Roadmap
-
-- PostgreSQL Support
-- Redis State Manager
-- Docker Deployment
-- Webhook Support
-- Multi-language Interface
-- Analytics Dashboard
-- REST API Integration
+* Python
+* SQLite
+* Asyncio
+* Long Polling
+* python-dotenv
+* CSV
+* Logging
+* Modular Architecture
 
 ---
 
-🤝 Contributing
+# 📌 Roadmap
+
+* PostgreSQL Support
+* Redis State Manager
+* Docker Deployment
+* Webhook Support
+* Multi-language Interface
+* Analytics Dashboard
+* REST API Integration
+
+---
+
+# 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome.
 
@@ -282,12 +325,13 @@ Feel free to fork the repository and submit a pull request.
 
 ---
 
-📄 License
+# 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
-⭐ Support
+## ⭐ Support
 
 If you found this project useful, consider giving it a ⭐ on GitHub.
+
