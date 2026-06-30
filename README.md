@@ -315,13 +315,6 @@ Logged events include:
 * Analytics Dashboard
 * REST API Integration
 
----
-
-# 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-Feel free to fork the repository and submit a pull request.
 
 ---
 
